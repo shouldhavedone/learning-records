@@ -18,6 +18,15 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: 'CSS',
+        items: [
+          {
+            text: '页面导入样式时，使用link和@import有什么区别',
+            link: '/css/页面导入样式时，使用link和@import有什么区别',
+          },
+        ],
+      },
     ],
 
     sidebar: [
@@ -30,6 +39,15 @@ export default defineConfig({
           {
             text: '写H5和小程序有什么相同及不同的地方',
             link: '/html/写H5和小程序有什么相同及不同的地方',
+          },
+        ],
+      },
+      {
+        text: 'CSS',
+        items: [
+          {
+            text: '页面导入样式时，使用link和@import有什么区别',
+            link: '/css/页面导入样式时，使用link和@import有什么区别',
           },
         ],
       },
