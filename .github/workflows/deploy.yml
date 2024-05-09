@@ -9,9 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: docs # 这一步检查 docs 代码
+          fetch-depth: 0
       - name: Setup Node.js and yarn
         uses: actions/setup-node@v3
         with:
