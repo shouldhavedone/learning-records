@@ -1,57 +1,31 @@
 import { defineConfig } from 'vitepress';
+import { getSidebarList } from './utils'
 
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   base: '/learning-records/',
   lang: 'en-US',
-  title: 'LearningRecords',
+  title: 'Learning-Records',
   description: 'Learning Records',
-
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
     nav: [
-      { text: '指引', link: '/info' },
-      {
-        text: 'HTML',
-        items: [
-          {
-            text: '写H5和小程序有什么相同及不同的地方',
-            link: '/html/写H5和小程序有什么相同及不同的地方',
-          },
-        ],
-      },
-      {
-        text: 'CSS',
-        items: [
-          {
-            text: '页面导入样式时，使用link和@import有什么区别',
-            link: '/css/页面导入样式时，使用link和@import有什么区别',
-          },
-        ],
-      },
+      { text: '面试题', link: '/interview/info' },
     ],
 
-    sidebar: [
-      {
-        items: [{ text: '指引', link: '/info' }],
-      },
-      {
-        text: 'HTML',
-        items: [
-          {
-            text: '写H5和小程序有什么相同及不同的地方',
-            link: '/html/写H5和小程序有什么相同及不同的地方',
-          },
-        ],
-      },
-      {
-        text: 'CSS',
-        items: [
-          {
-            text: '页面导入样式时，使用link和@import有什么区别',
-            link: '/css/页面导入样式时，使用link和@import有什么区别',
-          },
-        ],
-      },
+    sidebar: {
+      '/interview': getSidebarList('/interview')
+    },
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/shouldhavedone/learning-records' }
     ],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024 shouldhavedone'
+    }
   },
 });
