@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress';
 
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
+  base: '/learning-records/',
   lang: 'en-US',
   title: 'LearningRecords',
   description: 'Learning Records',
