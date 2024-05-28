@@ -22,6 +22,15 @@ export const getSidebarList = (pathname: string) => {
           },
         ],
       },
+      {
+        text: 'VUE',
+        items: [
+          {
+            text: 'vue的生命周期以及作用',
+            link: '/interview/vue/vue的生命周期以及作用',
+          },
+        ],
+      },
     ],
   }
 
